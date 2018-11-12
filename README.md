@@ -28,17 +28,20 @@ node v0.10.28+
 
 ## 项目前端效果：
 
-##### 首页:
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/170535.jpg)
+##### 订单概览:
+![image](https://github.com/gina00/OrderCenter/blob/master/static/img/dashboard.png)
 
-###### 一线营业员订单管理
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/170608.jpg)
+###### 统一订单管理
+![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2-1-1.png)
 
-###### 后台营业员订单管理
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2170631.jpg)
+###### 流程图
+![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2-1-2.png)
 
-###### 支付订单管理
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/170649.jpg)
+###### 订单详情
+![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2-2.png)
+
+###### 产品受理
+![image](https://github.com/gina00/OrderCenter/blob/master/static/img/3-1.png)
 
 
 
