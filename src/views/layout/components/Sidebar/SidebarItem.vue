@@ -1,9 +1,9 @@
 <template>
 <div>
-    <router-link to="/card">
+    <router-link to="/">
         <el-menu-item index="1">
             <i class="el-icon-menu"></i>
-            <span slot="title">补换卡</span>
+            <span slot="title">订单概览</span>
         </el-menu-item>
     </router-link>
     <router-link to="/saleordercenter">

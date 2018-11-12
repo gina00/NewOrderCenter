@@ -11,11 +11,13 @@ import router from './router'
 import '@/assets/styles/index.scss'
 import 'font-awesome/css/font-awesome.css'
 import store from '@/store/index'
+import ECharts from 'echarts'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
-
-/* eslint-disable no-new */
+Vue.component('v-chart', ECharts)
+Vue.prototype.$echarts = ECharts
+    /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
