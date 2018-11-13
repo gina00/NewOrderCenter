@@ -29,19 +29,19 @@ node v0.10.28+
 ## 项目前端效果：
 
 ##### 订单概览:
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/dashboard.png)
+![image](https://github.com/gina00/NewOrderCenter/blob/master/static/img/dashboard.png)
 
 ###### 统一订单管理
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2-1-1.png)
+![image](https://github.com/gina00/NewOrderCenter/blob/master/static/img/2-1-1.png)
 
 ###### 流程图
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2-1-2.png)
+![image](https://github.com/gina00/NewOrderCenter/blob/master/static/img/2-1-2.png)
 
 ###### 订单详情
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/2-2.png)
+![image](https://github.com/gina00/NewOrderCenter/blob/master/static/img/2-2.png)
 
 ###### 产品受理
-![image](https://github.com/gina00/OrderCenter/blob/master/static/img/3-1.png)
+![image](https://github.com/gina00/NewOrderCenter/blob/master/static/img/3-1.png)
 
 
 
