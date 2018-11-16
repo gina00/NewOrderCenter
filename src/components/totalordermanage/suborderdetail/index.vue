@@ -1,7 +1,8 @@
 <template>
-<section class="title-infor">
-    <el-card>
-        <div class="titleBox">
+<section>
+    <el-card class="baseinfor-card">
+        <section class="title-infor">
+        <div class="titleBox" >
             <span class="title-text">{{titleText}}</span>
         </div>
         <div class="rowBox">
@@ -36,6 +37,8 @@
                 </el-col>
             </el-row>
         </div>
+        </section>
+        <section class="title-infor">
         <div class="titleBox">
             <span class="title-text">{{titleTexts}}</span>
         </div>
@@ -49,13 +52,14 @@
                 </el-table-column>
                 <el-table-column prop="status" label="状态">
                 </el-table-column>
-                <el-table-column fixed="right" label="详情" width="100">
+                <el-table-column fixed="right" label="详情" width="200">
                     <template slot-scope="scope">
-                        <el-button @click="handleClick(scope.row)" type="text" size="small">子订单详情</el-button>
+                        <el-button @click="handleClick(scope.row)" type="primary" plain size="small">订单行详情</el-button>
                     </template>
                 </el-table-column>
             </el-table>
         </div>
+        </section>
     </el-card>
 </section>
 </template>

@@ -16,55 +16,30 @@ export const constantRouterMap = [{
             component: () =>
                 import ('@/views/dashboard/index')
         }]
-    }, {
-        path: '/card',
+    },
+    {
+        path: '/totalordermanage',
         component: Layout,
-        redirect: '/card/index',
-        name: 'card',
+        redirect: '/totalordermanage/index',
+        name: 'totalordermanage',
         hidden: true,
         children: [{
             path: 'index',
             component: () =>
-                import ('@/views/card/index')
+                import ('@/views/totalordermanage/index')
 
         }]
     },
     {
-        path: '/saleordercenter',
+        path: '/shoppingmanage',
         component: Layout,
-        redirect: '/saleordercenter/index',
-        name: 'saleordercenter',
+        redirect: '/shoppingmanage/index',
+        name: 'shoppingmanage',
         hidden: true,
         children: [{
             path: 'index',
             component: () =>
-                import ('@/views/saleorder/index')
-
-        }]
-    },
-    {
-        path: '/backstagesalesman',
-        component: Layout,
-        redirect: '/backstagesalesman/index',
-        name: 'backstagesalesman',
-        hidden: true,
-        children: [{
-            path: 'index',
-            component: () =>
-                import ('@/views/backstagesalesman/index')
-
-        }]
-    },
-    {
-        path: '/payform',
-        component: Layout,
-        redirect: '/payform/index',
-        name: 'payform',
-        hidden: true,
-        children: [{
-            path: 'index',
-            component: () =>
-                import ('@/views/payform/index')
+                import ('@/views/shoppingmanage/index')
 
         }]
     }

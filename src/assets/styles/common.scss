@@ -1,25 +1,42 @@
 $bottomColor:#e4e7ed;
-.titleBox {
-    position: relative;
-    font-size: 14px;
-    color: #0d86fe;
-    border-bottom: 1px solid $bottomColor;
-    .title-text {
-        line-height: 40px;
-    }
-    .date {
-        position: absolute;
-        right: 0px;
-        top: 10px;
-    }
+$blueColor:#00aaff;
+.color {
+    color: $blueColor;
 }
 
-.rowBox {
-    padding: 10px 0;
-    line-height: 40px;
-    font-size: 14px;
-    color: #666;
-    border-bottom: 1px solid $bottomColor;
+.baseinfor-card {
+    .titleBox {
+        display: flex;
+        position: relative;
+        font-size: 14px;
+        color: #148eff;
+        border-bottom: 1px solid $bottomColor;
+        .title-text {
+            line-height: 40px;
+        }
+        .date {
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+        &.message {
+            border-bottom: none;
+        }
+    }
+    .title-infor {
+        &:last-child {
+            .rowBox {
+                border-bottom: none;
+            }
+        }
+    }
+    .rowBox {
+        padding: 10px 0;
+        line-height: 40px;
+        font-size: 14px;
+        color: #666;
+        border-bottom: 1px solid $bottomColor;
+    }
 }
 
 
@@ -51,8 +68,12 @@ $color: #0d86fe;
     font-size: 14px;
     color: $color;
     line-height: 40px;
-    margin: 0 10px;
+    margin: 0 20px;
     position: relative;
+}
+
+.serchdetail {
+    width: 100%;
     &::before {
         content: "";
         width: 10px;
@@ -60,14 +81,28 @@ $color: #0d86fe;
         position: absolute;
         border-width: 8px;
         border-style: solid;
-        border-color: transparent transparent white transparent;
-        left: 40%;
-        top: 47px;
+        border-bottom: 8px solid #FFFFFF;
+        border-top: 8px solid transparent;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        right: 475px;
+        top: -15px;
+        z-index: 10;
     }
-}
-
-.serchdetail {
-    width: 100%;
+    &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border-width: 8px;
+        border-style: solid;
+        border-bottom: 9px solid #e4e7ed;
+        border-top: 9px solid transparent;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        left: 60%;
+        top: -17px;
+    }
 }
 
 .inlineBox {
@@ -79,8 +114,16 @@ $color: #0d86fe;
 }
 
 .serchdetail {
-    .rowBox {
-        padding: 5px 0;
+    position: relative;
+    .closebtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 1;
+    }
+    .buttonBox {
+        line-height: 40px;
+        padding: 10px 0;
         ul {
             display: flex;
             li {
