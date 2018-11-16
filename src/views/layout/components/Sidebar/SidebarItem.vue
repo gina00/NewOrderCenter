@@ -15,7 +15,7 @@
     <router-link to="/shoppingmanage">
     <el-menu-item index="3">
         <i class="el-icon-menu"></i>
-        <span slot="title">后台业务员订单管理</span>
+        <span slot="title">购物车管理</span>
     </el-menu-item>
     </router-link>
 </div>

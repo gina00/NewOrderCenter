@@ -123,7 +123,6 @@ export default {
 <style lang="scss">
 .tab-btn {
   margin: 5px 15px;
-
   a {
     display: inline-block;
     padding: 8px 15px;
