@@ -1,5 +1,5 @@
 <template>
-<section>
+<section class="shoppingcart">
     <el-card shadow="never">
         <el-row :gutter="0" class="buttonBox">
             <el-col :xs="12" :sm="12" :lg="12">
@@ -15,14 +15,13 @@
         </el-row>
         <tree-table :data="data" :columns="columns" border></tree-table>
         <div class="bottomLayout">
-                <div class="amountBox">
-                    <span>合计金额：0元</span>
-                    <span>合计金额：0元</span>
+                <div class="amountBox bettween">
+                    <span class="chooseItem">已选择<em class="redColor">1</em>件</span>
+                    <span>合计金额：30元</span>
                 </div>
                 <div class="reverseBox">
                     <div class="chooseBox">
-                        <el-button type="primary" plain class="payBox" @click="open">加入购物车</el-button>
-                        <el-button type="primary" class="payBox">立即支付</el-button>
+                        <el-button type="primary" class="payBox">提交</el-button>
                     </div>
                 </div>
             </div>

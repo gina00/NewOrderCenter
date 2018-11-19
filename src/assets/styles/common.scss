@@ -129,6 +129,7 @@ $color: #0d86fe;
     .buttonBox {
         line-height: 40px;
         padding: 10px 0;
+        margin-bottom: 0px;
         ul {
             display: flex;
             li {
@@ -200,6 +201,12 @@ $color: #0d86fe;
 
 /*底部合计金额样式*/
 
+.shoppingcart {
+    .amountBox {
+        height: 300px;
+    }
+}
+
 .amountBox {
     display: flex;
     flex-direction: row-reverse;
@@ -208,6 +215,14 @@ $color: #0d86fe;
     font-size: 20px;
     color: red;
     border-bottom: 1px solid #e4e7ed;
+    &.bettween {
+        flex-direction: row;
+        justify-content: space-between !important;
+        .chooseItem {
+            font-size: 14px;
+            color: #666;
+        }
+    }
 }
 
 .chooseBox {
