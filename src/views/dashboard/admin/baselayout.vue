@@ -23,7 +23,7 @@
     <el-row :gutter="20" class="mb20">
         <el-col :xs="24" :sm="24" :lg="10">
             <el-card shadow="always" class="chart-wrapper">
-                本周告警
+                <date-group></date-group>
             </el-card>
         </el-col>
         <el-col :xs="24" :sm="24" :lg="14">
@@ -41,6 +41,7 @@ import panelGroup from './components/panelGroup'
 import pieChart from './components/pieChart'
 import barChart from './components/barChart'
 import lineChart from './components/lineChart'
+import dateGroup from '@/components/dategroup/index'
 import monitorTab from './components/monitorTab'
 const lineChartData = {
   orderTotals: {
@@ -54,6 +55,7 @@ export default {
         pieChart,
         barChart,
         lineChart,
+        dateGroup,
         monitorTab
     },
     data(){
