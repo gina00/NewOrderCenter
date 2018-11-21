@@ -9,6 +9,8 @@ import {
     debounce
 } from '@/utils'
 
+const animationDuration = 1800
+
 export default {
     props: {
         className: {
@@ -106,6 +108,7 @@ export default {
                                     }  
                                 }  
                             },  
+                            animationDuration
                     },{
                         name: '集团业务量',
                         type: 'line',
@@ -118,7 +121,8 @@ export default {
                                         color:'#f89c9c'  //线的颜色
                                     }  
                                 }  
-                            }
+                            },
+                            animationDuration
                     }
                 ]
             })

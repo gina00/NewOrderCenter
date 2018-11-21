@@ -86,6 +86,7 @@ export default {
                                 color: '#04aee6'
                             }
                         },
+                        animationDuration
                     },
                     {
                         name: '销售中心',
@@ -97,6 +98,7 @@ export default {
                                 color: '#f56c6c'
                             }
                         },
+                        animationDuration
                     },
                     {
                         name: '政企订单中心',
@@ -107,6 +109,7 @@ export default {
                                 color: '#a3fb76'
                             }
                         },
+                        animationDuration
                     },
                     {
                         name: '渠道运营平台',
@@ -117,6 +120,7 @@ export default {
                                 color: '#22c67f'
                             }
                         },
+                        animationDuration
                     }
                 ]
             })

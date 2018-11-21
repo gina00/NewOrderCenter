@@ -237,3 +237,25 @@ $color: #0d86fe;
 .payBox {
     margin-left: 20px;
 }
+
+
+/*dashboard下拉列表组件样式覆盖*/
+
+.dateBox {
+    .el-date-editor .el-range-separator {
+        padding: 0 0px;
+        line-height: 31px;
+    }
+    .el-select {
+        display: inline-block;
+        width: 70px;
+        &>.el-input {
+            height: 36px;
+            &.el-input--suffix {
+                &>input.el-input__inner {
+                    height: 33px;
+                }
+            }
+        }
+    }
+}
