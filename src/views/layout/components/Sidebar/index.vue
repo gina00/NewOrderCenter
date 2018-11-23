@@ -2,10 +2,12 @@
 <el-scrollbar style="height:100%" wrapClass="scrollbar-wrapper">
     
     <el-menu
-      default-active="1"
+      default-active='1'
       class="el-menu-vertical-demo"
       @open="handleOpen"
-      @close="handleClose">
+      @close="handleClose"
+      @select='handleClick'
+      >
       <div class="subMenuTitle">
         <span class="cn">订单中心</span>
         <span class="en">Order Center</span>
@@ -26,12 +28,21 @@ export default {
       isCollapse: false
     };
   },
+  computed: {
+    computedName() {
+      return this.$store.state.subMenuManage.select;
+    }
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    handleClick(index){
+      this.$store.commit('changeSubMenu',index);
+      console.log(index);
     }
   }
 };

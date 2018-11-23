@@ -25,7 +25,7 @@
             </el-col>
         </el-row>
         <el-card shadow="never">
-            <tree-table :data="data" :columns="columns" border></tree-table>
+            <tree-table @operateClick='handleClick' :data="data" :columns="columns" border></tree-table>
             <div class="paginBox">
                 <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage4" :page-sizes="[100, 200, 300, 400]" :page-size="100" layout="total, sizes, prev, pager, next, jumper" :total="400">
                 </el-pagination>
@@ -285,7 +285,20 @@ export default {
             this.$alert('已成功加入购物车', '', {
                 confirmButtonText: '确定'
             });
-        }
+        },
+         handleClick: function (row, operate) {
+            //debugger;
+           
+            if (operate == '子订单详情') {
+                this.$store.commit("setTabName", "3");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+            if (operate == '商品详情') {
+                this.$store.commit("setTabName", "5");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+            //console.log(scope)
+        },
     }
 };
 </script>

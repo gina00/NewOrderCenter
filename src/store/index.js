@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 //分模块新建每个组件对应的store对象，并引入到此
 import appStore from './modules/app' //管理某个组件的store对象，引入刚才的app.js
-import contentStore from './modules/content' //管理某个组件的store对象，引入刚才的content.js
+import subMenuStore from './modules/subMenuManage' //管理某个组件的store对象，引入刚才的content.js
 import tabManage from './modules/tab-manage'
 
 Vue.use(Vuex)
@@ -18,7 +18,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     modules: {
         app: appStore, //另起别名
-        content: contentStore,
+        subMenuManage: subMenuStore,
         tabManage: tabManage
     }
 })

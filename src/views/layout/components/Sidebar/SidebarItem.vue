@@ -19,7 +19,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data(){
+        return{}
+    },
+    methods:{
+        handleClick(index){
+            this.$emit('showsubtab',index)
+        }
+    }
+
+
+};
 </script>
 
 <style lang="scss" scoped>

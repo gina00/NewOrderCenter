@@ -83,6 +83,7 @@
                     <el-table-column prop="orderid" label="订单号" width="380">
                         <!-- <template slot-scope="scope">
                             <i v-for="item in scope.row.icon" :key="item" :class="{item}"></i>
+                            handleClick方法没有定义
                         </template> -->
                     </el-table-column>
                     <el-table-column prop="name" label="业务名称" width="180">
@@ -91,7 +92,7 @@
                     </el-table-column>
                     <el-table-column fixed="right" label="操作" width="200">
                         <template slot-scope="scope">
-                            <el-button v-for="item in scope.row.operates" :key="item" @click="handleClick(scope.row)" type="primary" plain 
+                            <el-button v-for="item in scope.row.operates" :key="item" @click="handleClick(scope.row,scope.row.operates)" type="primary" plain 
                             size="small">
                             
                             {{item}}
@@ -131,6 +132,18 @@ export default {
         
       ]
     };
+  },
+  methods:{
+      handleClick: function (row,operate) {
+          if (operate == '子订单详情') {
+                this.$store.commit("setTabName", "3");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+            if (operate == '商品详情') {
+                this.$store.commit("setTabName", "5");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+      }
   }
 };
 </script>

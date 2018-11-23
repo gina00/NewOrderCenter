@@ -54,7 +54,8 @@
                 </el-table-column>
                 <el-table-column fixed="right" label="详情" width="200">
                     <template slot-scope="scope">
-                        <el-button @click="handleClick(scope.row)" type="primary" plain size="small">订单行详情</el-button>
+                        <el-button v-for="item in scope.row.operates" :key="item" 
+                        @click="handleClick(scope.row,scope.row.operates)" type="primary" plain size="small">{{item}}</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -74,20 +75,31 @@ export default {
                 id: '20180901880001',
                 type: '改号',
                 usertype: '手机用户',
-                status: '已完成'
+                status: '已完成',
+                 operates: ['订单行详情']
             },{
                 id: '20180901880001',
                 type: '改号',
                 usertype: '手机用户',
-                status: '已完成'
+                status: '已完成',
+                 operates: ['订单行详情']
             },{
                 id: '20180901880001',
                 type: '改号',
                 usertype: '手机用户',
-                status: '已完成'
+                status: '已完成',
+                 operates: ['订单行详情']
             }]
         }
-    }
+    },
+     methods:{
+      handleClick: function (row,operate) {
+          if (operate == '订单行详情') {
+                this.$store.commit("setTabName", "4");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+      }
+  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 <section class="orderManageBox">
-    <el-tabs v-model="editableTabsValue" type="card" closable @edit="handleTabsEdit" @click="handleClick()">
+    <el-tabs v-model="computedName.tabName" type="card" closable @edit="handleTabsEdit" @tab-click="handleClick">
         <el-tab-pane :key="item.name" v-for="item in editableTabs" :label="item.title" :name="item.name">
            <order-manage v-if='item.content=="orderManage"'></order-manage>
            <order-detail v-if='item.content=="orderDetail"'></order-detail>
@@ -58,11 +58,11 @@ export default {
       ],
       tabIndex: 2
     };
-    computedName:''
+    //这个没有用 computedName:''
   },
   computed: {
     computedName() {
-      return this.$store.state.tabManage.tabName;
+      return this.$store.state.tabManage;
     }
   },
   methods: {
@@ -94,11 +94,12 @@ export default {
         this.editableTabs = tabs.filter(tab => tab.name !== targetName);
       }
     },
-    handleClick: function(row, operate) {
-      
-          this.$store.commit("setTabName", "2");
+    handleClick: function(tab) {
+      //editableTabsValue 是不对的
+      //tab 是被选中的标签 tab 实例,现在debugger看下tab里面有什么
+      //debugger;
+          this.$store.commit("setTabName",tab.name);
         // alert("激活流程Tab，订单ID:"+row.ID);
-      
       //console.log(scope)
     },
   }

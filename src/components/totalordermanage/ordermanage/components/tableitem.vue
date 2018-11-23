@@ -117,7 +117,7 @@ export default {
                             starttime: "",
                             endtime: "",
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 },
@@ -165,6 +165,18 @@ export default {
             }
             if (operate == '订单详情') {
                 this.$store.commit("setTabName", "2");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+            if (operate == '子订单详情') {
+                this.$store.commit("setTabName", "3");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+            if (operate == '订单行详情') {
+                this.$store.commit("setTabName", "4");
+                // alert("激活流程Tab，订单ID:"+row.ID);
+            }
+            if (operate == '商品详情') {
+                this.$store.commit("setTabName", "5");
                 // alert("激活流程Tab，订单ID:"+row.ID);
             }
             //console.log(scope)
