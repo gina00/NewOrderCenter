@@ -267,6 +267,7 @@ export default {
             display: inline-block;
             width: 34px;
             height: 34px;
+            line-height: 34px;
             border-radius: 50px;
         }
     }

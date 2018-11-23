@@ -12,9 +12,9 @@
                 <el-button type="primary" icon="el-icon-search">查询</el-button>
             </el-form-item>
         </el-form>
-        <div class="hightsearch" @click="isShow()"><a>高级搜索</a></div>
+        <div class="hightsearch" @click="hasClick"><a>高级搜索</a></div>
     </div>
-    <search-item v-if="isshow"></search-item>
+    <search-item v-if="isshow" :show-value='isshow' @isshowtools="hasClick" class="toolbarShowAnimate"></search-item>
 </section>
 </template>
 
@@ -35,13 +35,39 @@ export default {
         }
     },
     methods: {
-        isShow() {
-            this.isshow = !this.isshow;
+        // isShow(){
+        //     this.isshow =!this.isshow
+        // },
+        hasClick(isshow){
+            this.isshow =!this.isshow
         }
     }
 };
 </script>
 
 <style lang="scss" scoped>
+.toolbarShowAnimate{
+    animation: toolBarShow 1s ease 0s 1 normal none running;
+}
+@keyframes toolBarShow {
+  from {
+    opacity: .2;
+    top: -5px;
+  }
 
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes toolBarShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 </style>

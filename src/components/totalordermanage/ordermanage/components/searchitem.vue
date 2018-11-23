@@ -1,6 +1,6 @@
 <template>
-<section class="serchdetail" v-if="isshow">
-    <el-button class="closebtn" type="danger" size="mini" icon="el-icon-close" circle  @click="isShow()"></el-button>
+<section class="serchdetail" v-if="showValue">
+    <el-button class="closebtn" type="danger" size="mini" icon="el-icon-close" circle  @click="hasClick(showValue)"></el-button>
     <el-card class="box-card" shadow="never">
         <div class="">
             <el-row :gutter="0" class="buttonBox">
@@ -94,6 +94,9 @@
 
 <script>
 export default {
+    props:[
+        'showValue'
+    ],
     data() {
         return {
             isshow: true,
@@ -205,8 +208,8 @@ export default {
         };
     },
      methods: {
-        isShow() {
-            this.isshow = !this.isshow;
+        hasClick(isshow){
+            this.$emit('isshowtools',isshow);
         }
     }
 };

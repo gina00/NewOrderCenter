@@ -5,9 +5,9 @@
         <template slot-scope="scope">
             <span v-for="space in scope.row._level" class="ms-tree-space" :key="space"></span>
             <span class="tree-ctrl" v-if="iconShow(0,scope.row)" @click="toggleExpanded(scope.$index)">
-          <i v-if="!scope.row._expanded" class="el-icon-plus"></i>
-          <i v-else class="el-icon-minus"></i>
-        </span>
+              <i v-if="!scope.row._expanded" class="fa fa-plus-square"></i>
+              <i v-else class="fa fa-minus-square"></i>
+            </span>
             {{scope.$index}}
         </template>
     </el-table-column>
@@ -15,9 +15,12 @@
         <template slot-scope="scope">
             <span v-if="index === 0" v-for="space in scope.row._level" class="ms-tree-space" :key="space"></span>
             <span class="tree-ctrl" v-if="iconShow(index,scope.row)" @click="toggleExpanded(scope.$index)">
-          <i v-if="!scope.row._expanded" class="el-icon-plus"></i>
-          <i v-else class="el-icon-minus"></i>
-        </span>
+              <i v-if="!scope.row._expanded" class="fa fa-plus-square"></i>
+              <i v-else class="fa fa-minus-square"></i>
+            </span>
+            <span v-if="scope.row.ishasicon&&index === 0" class="hasiconBox">
+              <i class="fa fa-hdd-o"></i>
+            </span>
             {{scope.row[column.value]}}
         </template>
     </el-table-column>
@@ -159,5 +162,9 @@ table td {
 
 .opra-btn-layout {
   display: flex;
+}
+.hasiconBox{
+      margin-left: 7px;
+    color: #0af;
 }
 </style>

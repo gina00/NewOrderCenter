@@ -109,6 +109,7 @@ export default {
                             ordertype: "",
                             starttime: "2018/08/01",
                             endtime: "2099/08/01",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商业订单"]
                         }
@@ -137,6 +138,7 @@ export default {
                             ordertype: "",
                             starttime: "2018/08/01",
                             endtime: "2099/08/01",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商业订单"]
                         }
@@ -165,6 +167,7 @@ export default {
                             ordertype: "",
                             starttime: "2018/08/01",
                             endtime: "2099/08/01",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商业订单"]
                         }
@@ -193,6 +196,7 @@ export default {
                             ordertype: "",
                             starttime: "2018/08/01",
                             endtime: "2099/08/01",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商业订单"]
                         }
@@ -221,6 +225,7 @@ export default {
                             ordertype: "",
                             starttime: "2018/08/01",
                             endtime: "2099/008/01",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商业订单"]
                         }
@@ -249,6 +254,7 @@ export default {
                             ordertype: "",
                             starttime: "2018/08/01",
                             endtime: "2099/008/01",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商业订单"]
                         }

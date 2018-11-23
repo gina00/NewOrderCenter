@@ -34,7 +34,7 @@
                 </el-col>
             </el-row>
             <el-row class="topuBox">
-                <img src="@/assets/images/topu.jpg" width="100%" height="100%">
+                <j-topu></j-topu>
             </el-row>
         </el-card>
     </div>
@@ -43,9 +43,11 @@
 
 <script>
 import treeTable from "@/components/treeTable";
+import jTopu from "@/components/jtopu/index";
 export default {
     components: {
-        treeTable
+        treeTable,
+        jTopu
     },
     data() {
         return {
@@ -116,6 +118,7 @@ export default {
                             name: "语音专线开通",
                             starttime: "",
                             endtime: "",
+                            ishasicon:true,
                             orderstatus: "已完成",
                             operates: ["商品详情"]
                         }
@@ -134,9 +137,7 @@ export default {
             ]
         };
     },
-
     methods: {
-
         toggleSelection(rows) {
             if (rows) {
                 rows.forEach(row => {
@@ -161,25 +162,19 @@ export default {
             if (operate == '流程') {
                 this.listshow = !this.listshow
                 this.isShow = !this.isShow
-                // alert("激活流程Tab，订单ID:"+row.ID);
             }
             if (operate == '订单详情') {
                 this.$store.commit("setTabName", "2");
-                // alert("激活流程Tab，订单ID:"+row.ID);
             }
             if (operate == '子订单详情') {
                 this.$store.commit("setTabName", "3");
-                // alert("激活流程Tab，订单ID:"+row.ID);
             }
             if (operate == '订单行详情') {
                 this.$store.commit("setTabName", "4");
-                // alert("激活流程Tab，订单ID:"+row.ID);
             }
             if (operate == '商品详情') {
                 this.$store.commit("setTabName", "5");
-                // alert("激活流程Tab，订单ID:"+row.ID);
             }
-            //console.log(scope)
         },
         showTab() {
             this.listshow = !this.listshow
