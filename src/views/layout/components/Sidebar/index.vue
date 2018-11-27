@@ -43,7 +43,8 @@ export default {
     },
     handleClick(index){
       this.$store.commit('changeSubMenu',index);
-      console.log(index);
+      return index
+      console.log('当前选中子菜单下标是：'+index);
     }
   }
 };
