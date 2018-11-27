@@ -44,10 +44,12 @@
 <script>
 import treeTable from "@/components/treeTable";
 import jTopu from "@/components/jtopu/index";
+import jsPlumb from "@/components/jsPlumb/index";
 export default {
     components: {
         treeTable,
-        jTopu
+        jTopu,
+        jsPlumb
     },
     data() {
         return {

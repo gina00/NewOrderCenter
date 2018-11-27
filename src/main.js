@@ -12,17 +12,22 @@ import '@/assets/styles/index.scss'
 import 'font-awesome/css/font-awesome.css'
 import store from '@/store/index'
 import ECharts from 'echarts'
+import jsPlumb from 'jsplumb'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.component('v-chart', ECharts)
 Vue.prototype.$echarts = ECharts
     /* eslint-disable no-new */
+Vue.prototype.$jsPlumb = jsPlumb.jsPlumb
+
 new Vue({
     el: '#app',
     router,
     store,
-    components: { App },
+    components: {
+        App
+    },
     template: '<App/>',
     render: h => h(App)
 })
