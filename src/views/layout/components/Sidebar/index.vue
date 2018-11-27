@@ -2,7 +2,7 @@
 <el-scrollbar style="height:100%" wrapClass="scrollbar-wrapper">
     
     <el-menu
-      default-active='computedName'
+      default-active='1'
       class="el-menu-vertical-demo"
       active-text-color='#00aaff'
       @open="handleOpen"

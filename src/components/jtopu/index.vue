@@ -1,6 +1,6 @@
 <template>
 <section>
-    <canvas width="1210" height="400px" id="canvas"></canvas>
+    <canvas width="1090" height="400px" id="canvas"></canvas>
 </section>
 </template>
 
@@ -61,7 +61,22 @@ export default {
         scene.add(textNode);
         return textNode;
       }
-
+      function ordergroupNode(x, y, w, h, text) {
+        var ordergroupNode = new JTopo.Node(text);
+        ordergroupNode.textPosition = "Middle_Center";
+        ordergroupNode.textOffsetY = 2;
+        ordergroupNode.font = "14px 微软雅黑"; // 字体
+        ordergroupNode.fontColor = "51,51,51";
+        ordergroupNode.borderRadius = 5; // 圆角
+        ordergroupNode.borderWidth = 1; // 边框的宽度
+        ordergroupNode.showSelected = false;
+        ordergroupNode.fillColor = "230,241,252";
+        ordergroupNode.borderColor = "230,241,252"; //边框颜色
+        ordergroupNode.setLocation(x, y);
+        ordergroupNode.setSize(w, h);
+        scene.add(ordergroupNode);
+        return ordergroupNode;
+      }
       function newLink(nodeA, nodeZ, text, dashedPattern, borderColor) {
         var link = new JTopo.Link(nodeA, nodeZ, text);
         link.lineWidth = 1; // 线宽
@@ -70,6 +85,7 @@ export default {
         link.bundleOffset = 0; // 折线拐角处的长度
         link.bundleGap = 0; // 线条之间的间隔
         link.zIndex=16;
+        link.shadow = "false"; 
         link.textOffsetY = 0; // 文本偏移量（向下3个像素）
         link.strokeColor = "34,198,127";
         scene.add(link);
@@ -96,7 +112,9 @@ export default {
         return link;
       }
       function container(x, y, w, h, text) {
+        var gridLayout = JTopo.layout.GridLayout(6, 1);
         var container = new JTopo.Container("");
+        container.layout = gridLayout;
         container.textPosition = "Middle_Center";
         container.font = "18pt 微软雅黑";
         container.fontColor = "51,51,51";
@@ -120,12 +138,12 @@ export default {
           "工单1：专线勘察派发",
           "工单2：专线勘察派发"
         ];
-        var conX = 220;
-        var conY = 45;
+        var conX = 200;
+        var conY = 30;
         for (var i = 0; i < arr.length; i++) {
-          var node = textNode(conX, conY, arr[i]);
+          var node = ordergroupNode(conX,conY,200,20,arr[i]);
           node.textPosition = "Middle_Center";
-          conX = conX - 5;
+          //conX = conX - 10; 
           conY = conY + 40;
           node.setLocation(conX, conY);
           node.zIndex=20;
@@ -142,27 +160,27 @@ export default {
       //第一个流程销售中心与订单中心的节点与连线
       var from = baseNode(2, 120, 150, 100, "销售中心");
       //var orderto2 = baseNode(200, 20, 240, 260); //订单中心节点
-      var orderto = container(0, 30, 240, 260); //订单中心节点
+      var orderto = container(200, 60, 240, 260); //订单中心节点
       var link = newFoldLink(from, orderto, "Link", "1");
-      var link = newFoldLink(orderto, from, "FoldLink", "vertical", 5);
+      var link = newFoldLink(orderto, from, "", "vertical", 5);
       
       //ios节点
-      var iosTo = solidNode(400, 120, 100, 100, "IOS");
+      var iosTo = solidNode(490, 120, 100, 100, "IOS");
       var link = newFoldLink(orderto, iosTo, "Link", "1");
-      var link = newFoldLink(iosTo, orderto, "FoldLink", "vertical", 5);
+      var link = newFoldLink(iosTo, orderto, "", "vertical", 5);
 
       //服务开通中心节点
-      var serverTo = solidNode(560, 120, 100, 100, "服务开通中心");
+      var serverTo = solidNode(690, 120, 100, 100, "服务开通中心");
       var link = newLink(iosTo, serverTo);
 
       //业务资源系统节点
-      var sourceTo = baseNode(720, 120, 120, 100, "服务开通中心");
+      var sourceTo = baseNode(880, 120, 120, 100, "服务开通中心");
       var link = newLink(serverTo, sourceTo);
 
       //UIG 节点
-      var uigTo = solidNode(400, 280, 100, 100, "UIG");
+      var uigTo = solidNode(490, 280, 100, 100, "UIG");
       var link = newLink(uigTo, iosTo,"Link", 3);
-      var link = newFoldLink(serverTo, uigTo, "FoldLink", "vertical", 5);
+      var link = newFoldLink(serverTo, uigTo, "", "vertical", 5);
     }
   }
 };
@@ -170,6 +188,6 @@ export default {
 
 <style>
 #canvas{
-  margin: 0 60px;
+  margin: 0 20px;
 }
 </style>
