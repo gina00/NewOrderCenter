@@ -90,7 +90,7 @@ $color: #0d86fe;
         border-top: 8px solid transparent;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        right: 475px;
+        right: 480px;
         top: -15px;
         z-index: 10;
     }
@@ -257,5 +257,22 @@ $color: #0d86fe;
                 }
             }
         }
+    }
+}
+
+
+/*分页模块的样式重写*/
+
+.ordertable {
+    .el-pagination {
+        display: flex;
+        justify-content: space-between;
+    }
+    .el-pagination__sizes {
+        margin-left: -145px;
+    }
+    .el-pagination::after,
+    .el-pagination::before {
+        content: none;
     }
 }

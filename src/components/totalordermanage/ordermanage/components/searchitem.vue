@@ -108,71 +108,47 @@ export default {
             city: [{
                 label: '福州'
             }, {
-                label: '双皮奶'
+                label: '厦门'
             }, {
                 
-                label: '蚵仔煎'
+                label: '深圳'
             }, {
                 
-                label: '龙须面'
+                label: '北京'
             }, {
-                label: '北京烤鸭'
+                label: '上海'
             }],
             orderstatus: [{
-                label: '福州'
+                label: '成功'
             }, {
-                label: '双皮奶'
-            }, {
-                
-                label: '蚵仔煎'
+                label: '失败'
             }, {
                 
-                label: '龙须面'
+                label: '未完成'
+            }, {
+                
+                label: '初始化'
             }, {
                
-                label: '北京烤鸭'
+                label: '执行中'
             }],
             ordertype: [{
-                label: '福州'
+                label: '个人业务'
             }, {
-                label: '双皮奶'
-            }, {
-                
-                label: '蚵仔煎'
-            }, {
-                
-                label: '龙须面'
-            }, {
-               
-                label: '北京烤鸭'
+                label: '集团业务'
             }],
             channel: [{
-                label: '福州'
+                label: '网上销售'
             }, {
-                label: '双皮奶'
-            }, {
-                
-                label: '蚵仔煎'
-            }, {
-                
-                label: '龙须面'
-            }, {
-               
-                label: '北京烤鸭'
+                label: '现场销售'
             }],
             objecttype: [{
-                label: '福州'
+                label: '企业'
             }, {
-                label: '双皮奶'
-            }, {
-                
-                label: '蚵仔煎'
+                label: '个人'
             }, {
                 
-                label: '龙须面'
-            }, {
-               
-                label: '北京烤鸭'
+                label: '商品'
             }],
             
             pickerOptions1: {

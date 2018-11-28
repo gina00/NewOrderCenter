@@ -9,10 +9,12 @@
             </ul>
         </div>
         <div class="right-box">
+          <router-link to="/shoppingmanage">
             <div class="shoppingIconBox">
                 <i class="fa fa-cart-plus shoppingCartCircle" aria-hidden="true"></i>
                 <span class="redMessageCircle"></span>
             </div>
+          </router-link>
             <div class="searchBox">
                 <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="searchVal">
                 </el-input>

@@ -69,7 +69,7 @@
                         <div class="grid-content bg-purple-light">币种：人民币</div>
                     </el-col>
                     <el-col :span="8">
-                        <div class="grid-content bg-purple">支付单号：10000008920</div>
+                        <div class="grid-content bg-purple">支付单号：<span class="color">10000008920</span></div>
                     </el-col>
                 </el-row>
             </div>
@@ -86,11 +86,11 @@
                             handleClick方法没有定义
                         </template> -->
                     </el-table-column>
-                    <el-table-column prop="name" label="业务名称" width="180">
+                    <el-table-column prop="name" label="业务名称" width="250">
                     </el-table-column>
-                    <el-table-column prop="status" label="订单状态">
+                    <el-table-column prop="status" label="订单状态" >
                     </el-table-column>
-                    <el-table-column fixed="right" label="操作" width="200">
+                    <el-table-column fixed="right" label="操作" width="180">
                         <template slot-scope="scope">
                             <el-button v-for="item in scope.row.operates" :key="item" @click="handleClick(scope.row,scope.row.operates)" type="primary" plain 
                             size="small">

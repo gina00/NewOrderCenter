@@ -72,7 +72,13 @@ export default {
                 },
                 xAxis: [{
                     type: 'category',
-                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+                    axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#333'
+                            }
+                        }
                 }],
                 yAxis: [{
                     type: 'value'

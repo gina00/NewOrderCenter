@@ -62,7 +62,7 @@ export default {
                     data: ['失败', '成功', '运行', '未运行']
                 },
                 series: [{
-                    name: '访问来源',
+                    name: '状态：',
                     type: 'pie',
                     radius: ['50%', '70%'],
                     avoidLabelOverlap: false,
@@ -86,19 +86,40 @@ export default {
                     },
                     data: [{
                             value: 335,
-                            name: '失败'
+                            name: '失败',
+                            itemStyle: {
+                            normal: {
+                                color: '#f56c6c'
+                            }
+                        },
+                            
                         },
                         {
                             value: 310,
-                            name: '成功'
+                            name: '成功',
+                            itemStyle: {
+                            normal: {
+                                color: '#04aee6'
+                            }
+                            }
                         },
                         {
                             value: 234,
-                            name: '运行'
+                            name: '运行',
+                            itemStyle: {
+                            normal: {
+                                color: '#50e3c2'
+                            }
+                            }
                         },
                         {
                             value: 135,
-                            name: '未运行'
+                            name: '未运行',
+                            itemStyle: {
+                            normal: {
+                                color: '#76ddfb'
+                            }
+                            }
                         }
                     ],
                     animationDuration

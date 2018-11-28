@@ -86,22 +86,22 @@ export default {
         {
           workid: "20180901880001",
           type: "客户改号",
-          starttime: "2018-11-11",
-          endtime: "手机用户",
+          starttime: "2018-11-11 12:00:00",
+          endtime: "2018-11-11 12:30:00",
           status: "已完成"
         },
         {
           workid: "20180901880001",
           type: "客户个人产品受理",
-          starttime: "2018-11-11",
-          endtime: "手机用户",
+          starttime: "2018-11-14 13:00:00",
+          endtime: "2018-11-14 13:30:00",
           status: "已完成"
         },
         {
           workid: "20180901880001",
           type: "客户改号",
-          starttime: "2018-11-11",
-          endtime: "手机用户",
+          starttime: "2018-11-19 15:30:00",
+          endtime: "2018-11-19 16:30:00",
           status: "已完成"
         }
       ],

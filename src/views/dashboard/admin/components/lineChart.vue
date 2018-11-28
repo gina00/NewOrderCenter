@@ -89,7 +89,12 @@ export default {
                     data: ['2018/01', '2018/02', '2018/03', '2018/04', '2018/05', '2018/06', '2018/07',
                         '2018/08', '2018/09', '2018/10', '2018/11', '2018/12'
                     ],
-                    color:'#333'
+                    axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#333'
+                            }
+                        }
                 },
                 yAxis: {
                     type: 'value'
@@ -102,9 +107,9 @@ export default {
                         data: actualData,
                         itemStyle : {  
                                 normal : {  
-                                    color:'#05aee6',  //圈圈的颜色
+                                    color:'#12b3e7',  //圈圈的颜色
                                     lineStyle:{  
-                                        color:'#05aee6'  //线的颜色
+                                        color:'#12b3e7'  //线的颜色
                                     }  
                                 }  
                             },  
@@ -116,9 +121,9 @@ export default {
                         data: expectedData,
                         itemStyle : {  
                                 normal : {  
-                                    color:'#f89c9c',  //圈圈的颜色
+                                    color:'#f67070',  //圈圈的颜色
                                     lineStyle:{  
-                                        color:'#f89c9c'  //线的颜色
+                                        color:'#f67070'  //线的颜色
                                     }  
                                 }  
                             },

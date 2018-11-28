@@ -1,5 +1,6 @@
 <template>
-<el-table :data="tableData" style="width: 100%">
+<el-scrollbar style="height:100%" wrapClass="scrollbar-wrapper">
+<el-table :data="tableData" style="width: 100%" height="327">
     <el-table-column type="index" :index="indexMethod" label="订单流水" width="100">
     </el-table-column>
     <el-table-column prop="name" label="业务名称" width="180" >
@@ -16,6 +17,7 @@
         </template>
     </el-table-column>
 </el-table>
+</el-scrollbar>
 </template>
 
 <script>
@@ -23,26 +25,36 @@ export default {
     data() {
         return {
             tableData: [{
-                name: '2016-05-02',
-                order: '王小虎',
-                repairorder: '上海市普陀区金沙江路 1518 弄',
+                name: '互联网专线勘察',
+                order: '集团业务',
+                repairorder: '驳回',
                 status: '完成'
             }, {
-                name: '2016-05-02',
-                order: '王小虎',
-                repairorder: '上海市普陀区金沙江路 1518 弄',
+                name: '个人用户入网',
+                order: '个人业务',
+                repairorder: '码号资源实占',
                 status: '失败'
             }, {
-                index:'0',
-                name: '2016-05-02',
-                order: '王小虎',
-                repairorder: '上海市普陀区金沙江路 1518 弄',
+                
+                name: '互联网专线开通',
+                order: '集团业务',
+                repairorder: '阶段回复',
                 status: '失败'
             }, {
-                index:'0',
-                name: '2016-05-02',
-                order: '王小虎',
-                repairorder: '上海市普陀区金沙江路 1518 弄',
+                name: '物联网用户入网',
+                order: '个人业务',
+                repairorder: '码号资源实占',
+                status: '完成'
+            },{
+                name: '物联网用户入网',
+                order: '个人业务',
+                repairorder: '码号资源实占',
+                status: '完成'
+            },
+            {
+                name: '物联网用户入网',
+                order: '个人业务',
+                repairorder: '码号资源实占',
                 status: '完成'
             }]
         }

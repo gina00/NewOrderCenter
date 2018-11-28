@@ -79,7 +79,7 @@ export default {
                  operates: ['订单行详情']
             },{
                 id: '20180901880001',
-                type: '改号',
+                type: '个人产品受理',
                 usertype: '手机用户',
                 status: '已完成',
                  operates: ['订单行详情']

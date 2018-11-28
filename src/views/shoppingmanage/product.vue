@@ -12,7 +12,7 @@
             <el-button type="primary" icon="el-icon-search">搜索</el-button>
         </el-col>
     </el-row>
-    <div v-if="active" class="tabBox">
+    <div v-if="active" class="ordertable">
         <el-row class="choose-tbar">
             <el-col :xs="12" :xl="12" :lg="9">
                 <ul>
@@ -27,7 +27,7 @@
         <el-card shadow="never">
             <tree-table @operateClick='handleClick' :data="data" :columns="columns" border></tree-table>
             <div class="paginBox">
-                <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage4" :page-sizes="[100, 200, 300, 400]" :page-size="100" layout="total, sizes, prev, pager, next, jumper" :total="400">
+                <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage1" :page-sizes="[10, 50, 100, 200]" :page-size="10" layout="total, sizes, prev, pager, next, jumper" :total="23">
                 </el-pagination>
             </div>
             <div class="bottomLayout">
@@ -58,7 +58,7 @@ export default {
     },
     data() {
         return {
-            currentPage4: 4,
+            currentPage1: 1,
             active: true,
             replyactive: false,
             input: '',
@@ -111,7 +111,7 @@ export default {
                             endtime: "2099/08/01",
                             ishasicon:true,
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 },
@@ -140,7 +140,7 @@ export default {
                             endtime: "2099/08/01",
                             ishasicon:true,
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 },
@@ -169,7 +169,7 @@ export default {
                             endtime: "2099/08/01",
                             ishasicon:true,
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 },
@@ -198,7 +198,7 @@ export default {
                             endtime: "2099/08/01",
                             ishasicon:true,
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 },
@@ -227,7 +227,7 @@ export default {
                             endtime: "2099/008/01",
                             ishasicon:true,
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 },
@@ -256,7 +256,7 @@ export default {
                             endtime: "2099/008/01",
                             ishasicon:true,
                             orderstatus: "已完成",
-                            operates: ["商业订单"]
+                            operates: ["商品详情"]
                         }
                     ]
                 }
@@ -297,10 +297,12 @@ export default {
            
             if (operate == '子订单详情') {
                 this.$store.commit("setTabName", "3");
+                this.$router.push({ path: "/totalordermanage" });
                 // alert("激活流程Tab，订单ID:"+row.ID);
             }
             if (operate == '商品详情') {
                 this.$store.commit("setTabName", "5");
+                this.$router.push({ path: "/totalordermanage" });
                 // alert("激活流程Tab，订单ID:"+row.ID);
             }
             //console.log(scope)
