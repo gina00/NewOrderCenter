@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       value6: "",
-      value: "",
+      value: "日",
       editableTabsValue: "1",
       editableTabs: [
         {
