@@ -70,39 +70,47 @@ export default {
         var basicType = {
           connector: "StateMachine",
           paintStyle: {
-            strokeStyle: "#28c3ba",
-            lineWidth: 3
+            stroke: "#28c3ba",
+            strokeWidth: 3
           },
           hoverPaintStyle: {
-            strokeStyle: "#24ba7a"
+            stroke: "#24ba7a"
           }
         };
         instance.registerConnectionType("basic", basicType);
         // 连线的样式
         var connectorPaintStyle = {
-            lineWidth: 2,
-            strokeStyle: "#61B7CF",
-            joinstyle: "round",
-            outlineColor: "white",
-            outlineWidth: 2
+          //以下注释为1.7.10版本属性名
+            // lineWidth: 2,
+            // strokeStyle: "#61B7CF",
+            // joinstyle: "round",
+            // outlineColor: "white",
+            // outlineWidth: 2
+            // 此为最新版本定义的属性名
+            stroke: '#61B7CF', 
+            strokeWidth: 3,
+            outlineStroke: "transparent",
           },
           // 连线hover样式
           connectorHoverStyle = {
-            lineWidth: 3,
-            strokeStyle: "#216477",
-            outlineWidth: 2,
-            outlineColor: "#216477"
+            // lineWidth: 3,
+            // strokeStyle: "#216477",
+            // outlineWidth: 2,
+            // outlineColor: "#216477"
+            stroke: '#216477', strokeWidth: 3
           },
           endpointHoverStyle = {
-            fillStyle: "#216477",
-            strokeStyle: "#216477"
+            // fillStyle: "#216477",
+            // strokeStyle: "#216477"
+            fill: '#216477', 
+            stroke: '#216477'
           },
           // 源端点的定义,原本是蓝色的小端点，现设置为透明，符合项目UI设计，如有修改，可自行设置填充颜色，如注释
           sourceEndpoint = {
             endpoint: "Dot",
             paintStyle: {
-              fillStyle: "#216477",
-              strokeStyle: "#216477",
+              fill: "transparent",
+              // strokeStyle: "#216477",
               //fillStyle: "transparent",
               radius: 3,
               lineWidth: 3
@@ -127,7 +135,7 @@ export default {
                 "Label",
                 {
                   location: [0.5, 1.5],
-                  label: "Drag",
+                  label: "",
                   cssClass: "endpointSourceLabel"
                 }
               ]
@@ -153,7 +161,7 @@ export default {
                 "Label",
                 {
                   location: [0.5, -0.5],
-                  label: "Drop",
+                  label: "",
                   cssClass: "endpointTargetLabel"
                 }
               ]
