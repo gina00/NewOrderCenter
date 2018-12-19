@@ -34,7 +34,7 @@
                 </el-col>
             </el-row>
             <el-row class="topuBox">
-                <j-topo></j-topo>
+                <js-plumb></js-plumb>
             </el-row>
         </el-card>
     </div>
@@ -44,10 +44,12 @@
 <script>
 import treeTable from "@/components/treeTable";
 import jTopo from "@/components/jtopu/index";
+import jsPlumb from "@/components/jsPlumb/index";
 export default {
   components: {
     treeTable,
-    jTopo
+    jTopo,
+    jsPlumb
   },
   data() {
     return {

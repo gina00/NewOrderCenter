@@ -11,8 +11,8 @@
 
 <script>
 //import goodsDetails from "@/components/totalordermanage/goodsdetails/index";
-import vProduct from "./product";
-import vShopping from "./shoppingcart";
+import vProduct from "./components/product";
+import vShopping from "./components/shoppingcart";
 export default {
   components: {
       vProduct,

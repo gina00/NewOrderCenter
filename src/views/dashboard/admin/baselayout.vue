@@ -41,7 +41,7 @@ import panelGroup from './components/panelGroup'
 import pieChart from './components/pieChart'
 import barChart from './components/barChart'
 import lineChart from './components/lineChart'
-import dateGroup from '@/components/dategroup/index'
+import dateGroup from './components/dategroup'
 import monitorTab from './components/monitorTab'
 const lineChartData = {
   orderTotals: {

@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import orderManage from "@/components/totalordermanage/ordermanage/index";
-import orderDetail from "@/components/totalordermanage/orderdetail/index";
-import suborderdetail from "@/components/totalordermanage/suborderdetail/index";
-import totalorderdetails from "@/components/totalordermanage/totalorderdetails/index";
-import goodsDetails from "@/components/totalordermanage/goodsdetails/index";
+import orderManage from "./components/ordermanage/index";
+import orderDetail from "./components/orderdetail/index";
+import suborderdetail from "./components/suborderdetail/index";
+import totalorderdetails from "./components/totalorderdetails/index";
+import goodsDetails from "./components/goodsdetails/index";
 export default {
   components: {
     "order-manage": orderManage,

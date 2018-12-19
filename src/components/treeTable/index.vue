@@ -1,5 +1,5 @@
 <template>
-<el-table :data="formatData" stripe :row-style="showRow" v-bind="$attrs" :border="false" @select="handleSelectionChange" >
+<el-table :data="formatData" stripe :row-style="showRow" v-bind="$attrs" :border="false" >
     <el-table-column type="selection" width="30"></el-table-column>
     <el-table-column v-if="columns.length===0" width="180">
         <template slot-scope="scope">
