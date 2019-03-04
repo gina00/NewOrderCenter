@@ -25,6 +25,12 @@
     <div id="order-source" class="item" style="left:920px;">
       <span>业务资源系统</span>
     </div>
+    <div id="order-adrop" class="item fillbg" style="left:500px;top:350px;">
+      <span>ADROP</span>
+    </div>
+    <div id="order-adrap" class="item fillbg" style="left:500px;top:500px;">
+      <span>ADRAP</span>
+    </div>
   </div>
 </template>
 
@@ -33,9 +39,9 @@ export default {
   data() {
     return {};
   },
-  mounted(){
-        this.jsPlumb();
-},
+  mounted() {
+    this.jsPlumb();
+  },
   methods: {
     jsPlumb() {
       jsPlumb.ready(function() {
@@ -80,16 +86,16 @@ export default {
         instance.registerConnectionType("basic", basicType);
         // 连线的样式
         var connectorPaintStyle = {
-          //以下注释为1.7.10版本属性名
+            //以下注释为1.7.10版本属性名
             // lineWidth: 2,
             // strokeStyle: "#61B7CF",
             // joinstyle: "round",
             // outlineColor: "white",
             // outlineWidth: 2
             // 此为最新版本定义的属性名
-            stroke: '#61B7CF', 
+            stroke: "#61B7CF",
             strokeWidth: 3,
-            outlineStroke: "transparent",
+            outlineStroke: "transparent"
           },
           // 连线hover样式
           connectorHoverStyle = {
@@ -97,13 +103,14 @@ export default {
             // strokeStyle: "#216477",
             // outlineWidth: 2,
             // outlineColor: "#216477"
-            stroke: '#216477', strokeWidth: 3
+            stroke: "#216477",
+            strokeWidth: 3
           },
           endpointHoverStyle = {
             // fillStyle: "#216477",
             // strokeStyle: "#216477"
-            fill: '#216477', 
-            stroke: '#216477'
+            fill: "#216477",
+            stroke: "#216477"
           },
           // 源端点的定义,原本是蓝色的小端点，现设置为透明，符合项目UI设计，如有修改，可自行设置填充颜色，如注释
           sourceEndpoint = {
@@ -116,6 +123,7 @@ export default {
               lineWidth: 3
             },
             isSource: true,
+            maxConnections: -1,
             //连线类型
             connector: [
               "Flowchart",
@@ -208,7 +216,9 @@ export default {
             ["LeftMiddle"]
           );
           _addEndpoints("source", [], ["LeftMiddle"]);
-          _addEndpoints("uig", ["TopCenter"], ["RightMiddle"]);
+          _addEndpoints("uig", ["TopCenter"], ["LeftMiddle","RightMiddle"]);
+          _addEndpoints("adrop", ["TopCenter"], ["LeftMiddle", "RightMiddle"]);
+          _addEndpoints("adrap", ["TopCenter"], ["LeftMiddle", "RightMiddle"]);
           //以上修改后，此句做对照对比
           //_addEndpoints("Window1", ["LeftMiddle", "RightMiddle"], ["TopCenter", "BottomCenter"]);
 
@@ -267,6 +277,18 @@ export default {
             uuids: ["uigTopCenter", "iosBottomCenter"],
             editable: true
           });
+          instance.connect({
+            uuids: ["centerRightMiddle", "uigLeftMiddle"],
+            editable: true
+          });
+          instance.connect({
+            uuids: ["centerRightMiddle", "adropLeftMiddle"],
+            editable: true
+          });
+          instance.connect({
+            uuids: ["centerRightMiddle", "adrapLeftMiddle"],
+            editable: true
+          });
 
           //
           // listen for clicks on connections, and offer to delete connections on click.
@@ -306,7 +328,7 @@ export default {
 <style scoped>
 #canvas {
   position: relative;
-  min-height: 400px;
+  min-height: 800px;
 }
 
 .item {

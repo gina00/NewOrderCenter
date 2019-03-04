@@ -1,7 +1,7 @@
 <template>
 <div class="countBox mb20">
     <el-row :gutter="10" class="panel-group">
-        <el-col v-for="(item,index) in 6" :key="item" :xs="12" :sm="12" :lg="4" class="card-panel-col">
+        <el-col v-for="(item,index) in titleList" :key="item" :xs="12" :sm="12" :lg="4" class="card-panel-col">
             <div class="card-panel" :class="[classList[index]+'-panel', {panelhover:titleList[index].hasicon}]" @mouseover="overPanel(index)" @mouseout="hidetipBox()">
                 <div class="icon-up" v-if="titleList[index].hasicon" :class="{'panelhover':titleList[index].hasicon}">
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
